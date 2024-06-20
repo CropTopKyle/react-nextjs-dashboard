@@ -1,7 +1,7 @@
 
 # Next.Js Dashboard Project
 
-Next.js Dashboard Project This project is a modern dashboard application built with cutting-edge web technologies. The stack includes React/Next.js, Shadcn/ui, TypeScript, Tailwind CSS, Recharts, Lucide React, and React Hook Form with Zod. The project demonstrates a comprehensive use of these tools to create a dynamic, responsive, and user-friendly dashboard.
+This project is a modern dashboard application built with cutting-edge web technologies. The stack includes React/Next.js, Shadcn/ui, TypeScript, Tailwind CSS, Recharts, Lucide React, and React Hook Form with Zod. The project demonstrates a comprehensive use of these tools to create a dynamic, responsive, and user-friendly dashboard.
 
 
 ## Tech Stack
