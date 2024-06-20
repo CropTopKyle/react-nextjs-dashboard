@@ -1,34 +1,35 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/sidebar";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from '@/components/providers/theme-provider';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "React NextJS Dashboard Application",
-  description: "A project to learn components!",
+	title: 'React NextJS Dashboard Application',
+	description: 'A project to learn components!',
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        <div className="flex">
-          <div className='hidden md:block h-[100vh] w-[325px]'>
-              <Sidebar />
-          </div>
-          <div className='p-5 w-full md:max-w-[1000px]'>
-              {children}
-          </div>
-        </div>
-        </body>
-    </html>
-  );
+	return (
+		<html lang='en'>
+			<head />
+			<body className={inter.className}>
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='light'
+					storageKey='dashboard'
+					enableSystem={true}
+					disableTransitionOnChange>
+					{children}
+					<Toaster />
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 }
